@@ -15,11 +15,12 @@
         <br/>
         <label for="senha_usuario">Senha:</label>
         <input type="password" id="senha_usuario" name="senha_usuario" >
+        <button type="submit" >Enviar</button>
     </form>
 
     <hr/>
     <h2>Registre-se</h2>
-    <form method="post" action="registra_login.php">
+    <form method="post" action="registra_usuario.php">
         <label for="nome_usuario">Nome de usuário:</label>
         <input type="text" id="nome_usuario" name="nome_usuario" >
         <br/>
@@ -28,6 +29,7 @@
         <br/>
         <label for="senha_usuario">Senha:</label>
         <input type="password" id="senha_usuario" name="senha_usuario" >
+        <button type="submit" >Enviar</button>
     </form>
 
 </body>

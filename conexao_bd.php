@@ -1,6 +1,6 @@
 <?php
 
-    class bd{
+    class db{
         private $host = 'localhost';
         private $usuario = 'root';
         private $senha = '';
@@ -11,7 +11,7 @@
             
             mysqli_set_charset($con, 'utf-8');
 
-            if(mysqli_errono($con)){
+            if(mysqli_connect_errno($con)){
                 echo 'Erro ao conectar com o banco de dados' . mysqli_connect_error();
             }
 
