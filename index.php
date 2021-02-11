@@ -32,6 +32,12 @@
         <button type="submit" >Enviar</button>
     </form>
 
+    <!--Tentar colocar um "SAIR" para executar um session_destroy()-->
+    <form method ="post" action="sair.php">
+        <h2>Sair</h2>
+        <button type="submit">Sair</button>
+    </form>
+
 </body>
 
 </html>

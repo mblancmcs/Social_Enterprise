@@ -25,7 +25,7 @@
     $email_existe = false;
 
     //Verificando se o nome já existe no banco de dados
-    $sql = "SELECT nome_usuario FROM tb_usuarios WHERE nome_usuario = $nome_usuario";
+    $sql = "SELECT nome_usuario FROM tb_usuarios WHERE nome_usuario = '$nome_usuario'";
 
     if($resultado_query = mysqli_query($link, $sql)){
 
@@ -46,7 +46,7 @@
     }
 
     //Verificando se o email já existe no banco de dados
-    $sql = "SELECT email_usuario FROM tb_usuarios WHERE email_usuario = $email_usuario";
+    $sql = "SELECT email_usuario FROM tb_usuarios WHERE email_usuario = '$email_usuario'";
 
     if($resultado_query = mysqli_query($link, $sql)){
 
@@ -83,15 +83,15 @@
 
     }
 
-    $sql = "INSERT INTO tb_usuarios(nome_usuario, senha_usuario, email_usuario) VALUES($nome_usuario, $senha_usuario, $email_usuario) "; // aqui não precisa colocar o perfil do usuario, porquê por padrão (default) ele já vai como 2.
+    $sql = "INSERT INTO tb_usuarios(nome_usuario, senha_usuario, email_usuario) VALUES('$nome_usuario', '$senha_usuario', '$email_usuario') "; // aqui não precisa colocar o perfil do usuario, porquê por padrão (default) ele já vai como 2.
 
     if(mysqli_query($link, $sql)){
         echo 'Usuário registrado com sucesso';
-        
+        /*
         $_SESSION['nome_usuario'] = $nome_usuario;
         $_SESSION['senha_usuario'] = $senha_usuario;
         $_SESSION['email_usuario'] = $email_usuario;
-
+        */
     } else {
         echo 'Erro na query';
     }
